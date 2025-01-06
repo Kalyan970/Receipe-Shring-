@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Cuisine - Recipe Sharing</title>
+    <link rel="stylesheet" href="chinese.css">
+</head>
+<body>
+    <h1>Chinese Cuisine</h1>
+    
+    <div class="recipe-grid">
+        <!-- 12 famous recipes arranged in a matrix format -->
+        <div class="recipe-item" style="background-image: url('images/Sweet Sour Chicken.jpg');"onclick="showRecipeDetails('Sweet and Sour Chicken')">Sweet and Sour Chicken</div>
+        <div class="recipe-item" style="background-image: url('images/Kung Pao Chicken.jpg');" onclick="showRecipeDetails('Kung Pao Chicken')">Kung Pao Chicken</div>
+        <div class="recipe-item" style="background-image: url('images/spring rools.jpg');"onclick="showRecipeDetails('Spring Rolls')">Spring Rolls</div>
+        <div class="recipe-item" style="background-image: url('images/Fried Rice.jpg');"onclick="showRecipeDetails('Fried Rice')">Fried Rice</div>
+
+        <div class="recipe-item" style="background-image: url('images/General Tso Chicken.jpg');"onclick="showRecipeDetails('General Tso\'s Chicken')">General Tso's Chicken</div>
+        <div class="recipe-item" style="background-image: url('images/Egg Foo Young.jpg');"onclick="showRecipeDetails('Egg Foo Young')">Egg Foo Young</div>
+        <div class="recipe-item" style="background-image: url('images/Hot and Sour Soup.jpg');"onclick="showRecipeDetails('Hot and Sour Soup')">Hot and Sour Soup</div>
+        <div class="recipe-item" style="background-image: url('images/Chop Suey.webp');"onclick="showRecipeDetails('Chop Suey')">Chop Suey</div>
+
+        <div class="recipe-item" style="background-image: url('images/Beef with Broccoli.jpg');"onclick="showRecipeDetails('Beef with Broccoli')">Beef with Broccoli</div>
+        <div class="recipe-item" style="background-image: url('images/Orange Chicken.jpg');"onclick="showRecipeDetails('Orange Chicken')">Orange Chicken</div>
+        <div class="recipe-item" style="background-image: url('images/Dim Sum.jpg');"onclick="showRecipeDetails('Dim Sum')">Dim Sum</div>
+        <div class="recipe-item" style="background-image: url('images/Peking Duck.jpg');"onclick="showRecipeDetails('Peking Duck')">Peking Duck</div>
+    </div>
+
+    <!-- Recipe details section -->
+    <div id="recipe-details" class="recipe-details">
+        <h2 id="recipe-name"></h2>
+        <h3>Ingredients:</h3>
+        <ul id="ingredients-list"></ul>
+        <h3>Preparation:</h3>
+        <p id="preparation-steps"></p>
+    </div>
+
+    <script src="chinese.js"></script>
+</body>
+</html>

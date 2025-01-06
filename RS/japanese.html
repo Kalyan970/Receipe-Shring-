@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Cuisine - Recipe Sharing</title>
+    <link rel="stylesheet" href="japanese.css">
+</head>
+<body>
+    <h1>Japanese Cuisine</h1>
+    <div class="recipe-grid">
+        <!-- 12 famous Japanese recipes arranged in a matrix format -->
+        <div class="recipe-item"  style="background-image: url('images/Sushi.jpg');"onclick="showRecipe('sushi')">Sushi</div>
+        <div class="recipe-item" style="background-image: url('images/Ramen.jpg');"onclick="showRecipe('ramen')">Ramen</div>
+        <div class="recipe-item" style="background-image: url('images/Tempura.jpg');"onclick="showRecipe('tempura')">Tempura</div>
+        <div class="recipe-item" style="background-image: url('images/Teriyaki Chicken.jpg');"onclick="showRecipe('teriyaki')">Teriyaki Chicken</div>
+
+        <div class="recipe-item" style="background-image: url('images/Yakitori.jpg');"onclick="showRecipe('yakitori')">Yakitori</div>
+        <div class="recipe-item" style="background-image: url('images/Tonkatsu.webp');"onclick="showRecipe('tonkatsu')">Tonkatsu</div>
+        <div class="recipe-item" style="background-image: url('images/Sashimi.jpg');" onclick="showRecipe('sashimi')">Sashimi</div>
+        <div class="recipe-item" style="background-image: url('images/Okonomiyaki.jpg');" onclick="showRecipe('okonomiyaki')">Okonomiyaki</div>
+
+        <div class="recipe-item" style="background-image: url('images/Udon.jpg');"onclick="showRecipe('udon')">Udon</div>
+        <div class="recipe-item" style="background-image: url('images/Miso Soup.jpg');"onclick="showRecipe('misosoup')">Miso Soup</div>
+        <div class="recipe-item" style="background-image: url('images/Katsudon.jpg');"onclick="showRecipe('katsudon')">Katsudon</div>
+        <div class="recipe-item" style="background-image: url('images/Donburi.jpg');"onclick="showRecipe('donburi')">Donburi</div>
+    </div>
+
+    <div id="recipe-details" class="recipe-details">
+        <h2 id="recipe-name"></h2>
+        <h3>Ingredients:</h3>
+        <ul id="ingredients-list"></ul>
+        <h3>Preparation:</h3>
+        <ol id="preparation-steps"></ol>
+    </div>
+
+    <script src="japanese.js"></script>
+</body>
+</html>

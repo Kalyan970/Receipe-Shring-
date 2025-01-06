@@ -1,0 +1,95 @@
+/* Reset Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    
+    color: #faf8f8; /* Text color */
+    height: 0vh; /* Full viewport height */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Center vertically below navbar */
+    margin: 0;
+    background-image: url('images/Recipes.jpg'); /* Background image added */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-size: cover; /* Cover the entire viewport */
+    background-attachment: fixed; /* Ensure the image stays in place on scroll */
+    background-position: center; /* Center the background image */
+    overflow: hidden; /* Remove scrollbars */
+}
+
+#d1 {
+    color: hsl(0, 5%, 96%);
+    text-align: center; 
+    width: 70%; /* Adjust width */
+    height: 70vh; /* Adjust height */
+    margin: 38vh auto 20px auto; /* Center the element vertically */
+    font-size: 4rem;
+    font-style: italic;
+    margin-left: 170px;
+
+}
+
+/* Header Section */
+.header h1 {
+    font-size: 3rem; /* Large heading size */
+    color: #f3f3f6; /* Tomato color */
+}
+
+.header p {
+    font-size: 1.2rem; /* Subheading text size */
+    color: hsl(0, 11%, 93%); /* Slightly lighter text color */
+    margin-bottom: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 10;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-btn {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.about-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.continue-btn {
+    position: absolute; /* Position it absolutely */
+    bottom: 90px; /* Set distance from the bottom */
+    margin-right: px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure the button is centered */
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #218838; /* Darker shade on hover */
+}

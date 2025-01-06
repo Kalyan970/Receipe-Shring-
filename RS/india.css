@@ -1,0 +1,108 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff9c4, #c8e6c9); /* Subtle gradient background */
+    overflow-x: hidden; /* Prevent horizontal scroll bar */
+}
+
+/* Main heading styling */
+h1 {
+    text-align: center;
+    color: #388e3c;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the recipe grid container */
+.recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+/* Recipe card styling */
+.recipe-item {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 250px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for recipe cards */
+.recipe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe name styling */
+.recipe-name {
+    position: absolute;
+    bottom:10px;
+    left: 10px;
+    
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Recipe details modal styling */
+#recipeDetails {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: none;
+    overflow-y: auto;
+}
+
+/* Recipe details header styling */
+#recipeTitle {
+    font-size: 28px;
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+
+/* Ingredients and instructions styling */
+#recipeIngredients, #recipeInstructions {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Close button styling for the recipe details modal */
+button {
+    background-color: #388e3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2c6a2f;
+}

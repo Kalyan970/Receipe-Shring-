@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Cuisine - Recipe Sharing</title>
+    <link rel="stylesheet" href="italian.css">
+  
+
+        
+    
+</head>
+<body>
+    <h1>Italian Cuisine</h1>
+    
+    <div class="recipe-grid">
+        <!-- 12 famous recipes arranged in a matrix format -->
+        <div class="recipe-item"  onclick="showRecipeDetails('Spaghetti Carbonara')"><span>Spaghetti Carbonara</span></div>
+        <div class="recipe-item"  onclick="showRecipeDetails('Margherita Pizza')"><span>Margherita Pizza</span></div>
+        <div class="recipe-item"  onclick="showRecipeDetails('Lasagna')"><span>Lasagna</span></div>
+        <div class="recipe-item"  onclick="showRecipeDetails('Risotto')"><span>Risotto</span></div>
+
+        <div class="recipe-item"  onclick="showRecipeDetails('Fettuccine Alfredo')"><span>Fettuccine Alfredo</span></div>
+        <div class="recipe-item" onclick="showRecipeDetails('Minestrone Soup')"><span>Minestrone Soup</span></div>
+        <div class="recipe-item"  onclick="showRecipeDetails('Caprese Salad')"><span>Caprese Salad</span></div>
+        <div class="recipe-item"  onclick="showRecipeDetails('Bruschetta')"><span>Bruschetta</span></div>
+
+        <div class="recipe-item" onclick="showRecipeDetails('Gnocchi')"><span>Gnocchi</span></div>
+        <div class="recipe-item"  onclick="showRecipeDetails('Osso Buco')"><span>Osso Buco</span></div>
+        <div class="recipe-item"  onclick="showRecipeDetails('Risotto alla Milanese')"><span>Risotto alla Milanese</span></div>
+        <div class="recipe-item"  onclick="showRecipeDetails('Tiramisu')"><span>Tiramisu</span></div>
+    </div>
+
+    <div id="recipe-details" style="display:none;">
+        <h2 id="recipe-name"></h2>
+        <h3>Ingredients:</h3>
+        <ul id="ingredients-list"></ul>
+        <h3>Preparation:</h3>
+        <div id="preparation-steps"></div>
+        <button onclick="closeRecipeDetails()">Close</button>
+    </div>
+
+    <script src="italian.js"></script>
+</body>
+</html>

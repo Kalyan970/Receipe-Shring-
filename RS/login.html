@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="login.js" defer></script>
+    <style>
+      /* General Styles */
+      body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      /* Form Container */
+      form {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 30px 40px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+      }
+      
+      /* Form Inputs */
+      input {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 16px;
+        outline: none;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease;
+      }
+      
+      input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      
+      input:focus {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      
+      /* Submit Button */
+      button {
+        width: 100%;
+        padding: 12px 15px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 25px;
+        background-color: #2575fc;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      
+      button:hover {
+        background-color: #6a11cb;
+        transform: scale(1.05);
+      }
+      
+      button:active {
+        transform: scale(0.95);
+      }
+      
+      /* Message Div */
+      #message {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #ffcccb;
+      }
+      
+      /* Sign Up Link */
+      .signup-link {
+        margin-top: 20px;
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .signup-link:hover {
+        color: #ffcccb;
+      }
+      
+      /* Popup Message */
+      .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #333;
+        padding: 20px 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        z-index: 1000;
+        width: 90%;
+        max-width: 400px;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      
+      .popup p {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #6a11cb;
+      }
+      
+      .popup button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        background-color: #2575fc;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .popup button:hover {
+        background-color: #6a11cb;
+      }
+      
+      /* Overlay */
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      
+      /* Fade-in Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        form {
+          padding: 20px;
+        }
+      
+        input, button {
+          font-size: 14px;
+        }
+      
+        .popup {
+          padding: 15px 20px;
+        }
+      
+        .popup p {
+          font-size: 16px;
+        }
+      
+        .popup button {
+          font-size: 14px;
+        }
+      }
+      
+          </style>
+</head>
+<body>
+    <form id="loginForm">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <a href="signup.html" class="signup-link">Don't have an account? Sign Up</a>
+    </form>
+    <div id="message"></div>
+</body>
+</html>

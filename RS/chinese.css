@@ -1,0 +1,287 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff9c4, #c8e6c9); /* Subtle gradient background */
+    overflow-x: hidden; /* Prevent horizontal scroll bar */
+}
+
+/* Main heading styling */
+h1 {
+    text-align: center;
+    color: #388e3c;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Increased height for the recipe grid */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with flexible columns */
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 800px; /* Increased grid height */
+}
+
+/* Individual recipe item styling */
+.recipe-item {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #388e3c; /* Adds a green accent border */
+}
+
+/* Hover effect on recipe items */
+.recipe-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #e8f5e9; /* Subtle background change on hover */
+}
+
+/* Recipe name styling */
+.recipe-name {
+    font-size: 20px;
+    color: #388e3c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100%;            /* Ensure the element takes up full height of the recipe item */
+    margin: 10px 0;
+}
+
+/* Hover effect for recipe name */
+.recipe-name:hover {
+    color: #1b5e20;
+    transform: scale(1.05);
+}
+
+
+/* Recipe details modal styling */
+#recipe-details {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+    display: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Recipe Title styling */
+#recipe-name {
+    font-size: 28px;
+    color: #388e3c;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Styling for the ingredients and instructions sections */
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Paragraph styling for ingredients and instructions */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+button {
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #2c6e1f;
+    transform: scale(1.05);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .recipe-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .recipe-item {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #recipe-name {
+        font-size: 24px;
+    }
+}
+
+/* Added Styles for the recipe container */
+.recipe-item h3 {
+    font-size: 22px;
+    color: #4caf50;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Style for grid gap */
+.recipe-grid {
+    gap: 30px; /* Increased gap for better spacing */
+}
+
+/* Hover effects on the recipe items for smooth transitions */
+.recipe-item {
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.recipe-item:hover {
+    background-color: #dcedc8; /* Light green background */
+    transform: translateY(-15px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Recipe item with individual background images */
+.recipe-item:nth-child(1) {
+    background-image: url('images/sweet-and-sour-chicken.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Adjust text color for visibility */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Add text shadow for readability */
+}
+
+.recipe-item:nth-child(2) {
+    background-image: url('images/kung-pao-chicken.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(3) {
+    background-image: url('images/spring-rolls.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(4) {
+    background-image: url('images/fried-rice.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(5) {
+    background-image: url('images/general-tsos-chicken.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(6) {
+    background-image: url('images/egg-foo-young.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(7) {
+    background-image: url('images/hot-and-sour-soup.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(8) {
+    background-image: url('images/chop-suey.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(9) {
+    background-image: url('images/beef-with-broccoli.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(10) {
+    background-image: url('images/orange-chicken.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(11) {
+    background-image: url('images/dim-sum.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.recipe-item:nth-child(12) {
+    
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
